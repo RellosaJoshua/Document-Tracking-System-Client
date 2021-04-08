@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+:root {
+	font-size: 16px;
+	--mainColor: #e53935;
+	--mainColorHover: #d43431;
+	--mainColorDisabled: #bb2c2a;
+	--secTextColor: #ececec;
+	--borderColor: #d1cfcf;
+	--textColorOnLight: #374a53;
+	--textColorOnDark: #f2ffff;
+	--bgColor: #f6f9fc;
+	--linkColor: #7a6ee7;
+	--boxShadow: 0 2px 10px rgb(50 50 93 / 10%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Mulish", sans-serif;
+	color: var(--textColorOnLight);
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--bgColor);
+	overflow-x: hidden;
+}
+
+.width-restriction {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Login page */
+
+.login {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	padding: 2rem 0;
+}
+
+.login-form {
+	margin-top: 3rem;
+	border-radius: 5px;
+	background-color: white;
+	height: 350px;
+	width: 350px;
+	box-shadow: var(--boxShadow);
+	border-top: 5px solid var(--mainColor);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-form-logo {
+	height: 65px;
+	width: 65px;
+	transform: translateY(-55%);
+	cursor: pointer;
+}
+
+.login-form font {
+	transform: translateY(-55%);
+	font-size: 18px;
+}
+
+.login-inputs {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+}
+
+.login-inputs input {
+	margin-bottom: 15px;
+	width: 250px;
+	height: 40px;
+	padding-left: 10px;
+	outline: none;
+	border: 1px solid var(--textColorOnLight);
+	border-radius: 2px;
+}
+
+.login-inputs input:focus {
+	border: 1px solid var(--mainColor);
+	box-shadow: 0 0 7px var(--mainColor);
+}
+
+.login-inputs input[type="submit"] {
+	padding: 0;
+	cursor: pointer;
+	background-color: var(--mainColor);
+	color: var(--textColorOnDark);
+	border: none;
+}
+
+.login-inputs input[type="submit"]:hover {
+	background-color: var(--mainColorHover);
+}
+
+#logging-in {
+	background-color: var(--mainColorDisabled);
+}
+
+.login-err-message {
+	color: var(--mainColor);
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.org-link {
+	margin-top: 3rem;
+	padding: 1rem;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.org-link a {
+	text-decoration: none;
+	color: var(--linkColor);
+}
+
+.org-link a:hover {
+	text-decoration: underline;
+}
+
+/* End of login page */
+
+/* Admin pages */
+
+.admin-header-wrapper {
+	background-color: white;
+	height: 65px;
+	border-bottom: 4px solid var(--mainColor);
+	width: 100%;
+	position: fixed;
+}
+
+.admin-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	padding: 1rem 1.5rem;
+}
+
+.admin-header-logo {
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+
+.admin-header-logo img {
+	width: 40px;
+	height: 40px;
+}
+
+.jump-search input {
+	padding: 0.6rem 1rem;
+	width: 350px;
+	outline: none;
+	border-radius: 3px;
+	border: 1px solid var(--borderColor);
+}
+
+.admin-logout button {
+	padding: 0.5rem 0.7rem;
+	cursor: pointer;
+	background-color: var(--mainColor);
+	color: var(--textColorOnDark);
+	border: none;
+	border-radius: 3px;
+	outline: none;
+}
+
+.admin-logout button:hover {
+	background-color: var(--mainColorHover);
+}
+
+.admin-breadcrumbs {
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.admin-nav-wrapper {
+	background-color: white;
+	height: 48px;
+	width: 100%;
+	box-shadow: var(--boxShadow);
+	margin-top: 46px;
+}
+
+.admin-nav {
+	height: 100%;
+	padding: 1rem 1rem;
+}
+
+.admin-routes {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 440px;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.admin-routes #active {
+	color: var(--mainColor);
+	border-bottom: 2px solid var(--mainColor);
+}
+
+.admin-routes li {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	height: 48px;
+	width: 79px;
+	cursor: pointer;
+}
+
+.admin-routes li:hover {
+	color: var(--mainColor);
+	border-bottom: 2px solid var(--mainColor);
+}
+
+.admin-settings-breadcrumb {
+	padding: 0.8rem 1rem;
+	padding-top: 15px;
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+	border: none;
+}
+
+.admin-settings-breadcrumb-font {
+	font-weight: bold;
+}
+
+.admin-settings-breadcrumb button {
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	font-size: 13px;
+	border-radius: 3px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: var(--mainColor);
+	box-shadow: var(--boxShadow);
+	background-color: white;
+	outline: none;
+}
+
+.admin-settings-breadcrumb button:hover {
+	background-color: var(--bgColor);
+}
+
+.admin-settings-breadcrumb button svg {
+	margin-right: 5px;
+	fill: var(--mainColor);
+}
+
+.admin-settings-breadcrumb font svg {
+	padding-top: 6px;
+	fill: var(--textColorOnLight);
+}
+
+.admin-main-wrapper {
+	height: auto;
+}
+
+.admin-main {
+	padding: 0.5rem 1rem;
+	margin-bottom: 3rem;
+}
+
+.admin-dashboard {
+}
+
+.admin-users {
+	height: auto;
+	display: flex;
+}
+
+.add-user {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 2.5rem;
+	background-color: white;
+	box-shadow: var(--boxShadow);
+	border-radius: 3px;
+}
+
+.add-user label {
+	margin-bottom: 25px;
+	color: var(--textColorOnLight);
+}
+
+.add-user input {
+	margin-bottom: 25px;
+	width: 300px;
+	height: 35px;
+	padding-left: 10px;
+	border: 1px solid var(--textColorOnLight);
+	border-radius: 2px;
+	outline: none;
+}
+
+.add-user button {
+	padding: 0;
+	cursor: pointer;
+	background-color: var(--mainColor);
+	color: var(--textColorOnDark);
+	border: none;
+	border-radius: 2px;
+	height: 35px;
+	width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+}
+
+.add-user button svg {
+	fill: var(--textColorOnDark);
+	height: 20px;
+	margin-right: 5px;
+}
+
+.add-user button:hover {
+	background-color: var(--mainColorHover);
+}
+
+.add-user select {
+	margin-bottom: 25px;
+	width: 300px;
+	height: 35px;
+	padding-left: 10px;
+	border: 1px solid var(--textColorOnLight);
+	border-radius: 2px;
+	outline: none;
+}
+
+/* End of admin pages */
+
+/* User Pages */
+
+.user-nav-wrapper {
+	background-color: white;
+	box-shadow: var(--boxShadow);
+	height: 70px;
+}
+
+.user-nav-wrapper nav {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.user-nav-wrapper nav .logo {
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	color: var(--mainColor);
+}
+
+nav .logo img {
+	height: 40px;
+	width: 40px;
+	margin-right: 5px;
+}
+
+.user-routes-options {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.user-routes-options button {
+	width: 75px;
+	height: 35px;
+	cursor: pointer;
+	margin-left: 30px;
+	outline: none;
+}
+
+.user-routes {
+	width: 450px;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	list-style-type: none;
+	justify-content: space-around;
+}
+
+.user-routes li {
+	display: flex;
+	align-items: center;
+	color: var(--textColorOnLight);
+	cursor: pointer;
+	height: 100%;
+	width: 105px;
+	justify-content: center;
+	font-size: 13px;
+}
+
+.user-routes li:hover {
+	background-color: var(--secTextColor);
+}
+
+.user-routes li svg {
+	fill: var(--textColorOnLight);
+	height: 22px;
+	margin-right: 5px;
+}
+
+.user-routes #active {
+	border-bottom: 2px solid var(--mainColor);
+	color: var(--mainColor);
+}
+
+.user-routes #active svg {
+	fill: var(--mainColor);
+}
+
+.request-header-wrapper {
+	background-color: var(--mainColorDisabled);
+	height: 120px;
+}
+
+.request-header-wrapper header {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+}
+
+.left label {
+	font-size: 1.3rem;
+	color: var(--textColorOnDark);
+}
+
+.left form {
+	padding: 1rem 1rem;
+	background-color: white;
+	border-radius: 4px;
+	width: 460px;
+	height: 55px;
+	transform: translateY(80%);
+	display: flex;
+	align-items: center;
+	box-shadow: var(--boxShadow);
+}
+
+.left form svg {
+	height: 100%;
+	width: 50px;
+}
+
+.left form input {
+	height: 50px;
+	width: 100%;
+	border: none;
+	padding: 1rem 0.5rem;
+	outline: none;
+	font-size: 1rem;
+}
+
+.right button {
+	border: none;
+	border-radius: 3px;
+	display: flex;
+	padding: 0.8rem 0.9rem;
+	align-items: center;
+	border-radius: 20px;
+	color: var(--textColorOnLight);
+	cursor: pointer;
+	background-color: white;
+	box-shadow: var(--boxShadow);
+	outline: none;
+}
+
+.right button:hover {
+	background-color: var(--secTextColor);
+}
+
+.right button svg {
+	margin-right: 10px;
+	fill: var(--textColorOnLight);
+}
+
+.new-request-header {
+	padding: 1rem 1rem;
+	background-color: var(--mainColorDisabled);
+	height: 120px;
+}
+
+.new-request-header header {
+	padding: 1rem 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.new-request-header header .left form {
+	width: 600px;
+	height: auto;
+}
+
+.right .back-btn {
+	padding: 0.9rem 1.2rem;
+}
+
+.left .new-request-form {
+	display: flex;
+	flex-direction: column;
+	transform: translateY(10%);
+}
+
+.new-request-form input {
+	border: 1px solid var(--textColorOnLight);
+}
+
+/* End of User Pages */
